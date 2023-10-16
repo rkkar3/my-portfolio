@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobiles</title>
+    <style>
+        .oppo{
+            background-image: url(./images/oppo.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.9;
+            border: 2px solid black;
+            box-shadow: 10px 5px 5px gray;
+        }
+        .vivo{
+            background-image: url(./images/vivo.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.9;
+            border: 2px solid black;
+            box-shadow: 10px 5px 5px gray;
+        }
+        .redmi{
+            background-image: url(./images/redmi.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.9;
+            border: 2px solid black;
+            box-shadow: 10px 5px 5px gray;
+        }
+        .redmi:hover{
+            opacity: 1;
+        }
+        .oppo:hover{
+            opacity: 1;
+        }
+        .vivo:hover{
+            opacity: 1;
+        }
+        .section {
+            height: 600px;
+        }
+        main {
+            height: 500px;
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            grid-gap: 4px;
+            margin-top: 5px;
+        }
+        .card-title{
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+        }
+        button{
+            width: 170px;
+            height: 50px;
+            font-size: 30px;
+            background-color: white;
+            border: none;
+            margin-top: 150px;
+
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <section>
+        <main>
+            <div class="oppo">
+                <div class="card">
+                    <div class="card-title">
+                        oppo
+                    </div>
+                    <div class="card-footer">
+                        <button>shop now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="redmi">
+                <div class="card">
+                    <div class="card-title">
+                        Redmi
+                    </div>
+                    <div class="card-footer">
+                        <button>shop now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="vivo">
+                <div class="card">
+                    <div class="card-title">
+                        vivo
+                    </div>
+                    <div class="card-footer">
+                        <button>shop now</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+</html>
+

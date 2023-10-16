@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids-fashion</title>
+    <style>
+        .kids-clothing{
+            background-image: url(./images/kids-clothing.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.9;
+            border: 2px solid black;
+            box-shadow: 10px 5px 5px gray;
+        }
+        .kids-watches{
+            background-image: url(./images/kids-watches.jpeg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.9;
+            border: 2px solid black;
+            box-shadow: 10px 5px 5px gray;
+        }
+        .kids-shoes{
+            background-image: url(./images/kids-shoes.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.9;
+            border: 2px solid black;
+            box-shadow: 10px 5px 5px gray;
+        }
+        .kids-clothing:hover{
+            opacity: 1;
+        }
+        .kids-watches:hover{
+            opacity: 1;
+        }
+        .kids-shoes:hover{
+            opacity: 1;
+        }
+        .section {
+            height: 600px;
+        }
+        main {
+            height: 500px;
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            grid-gap: 4px;
+            margin-top: 5px;
+        }
+        .card-title{
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+        }
+        button{
+            width: 170px;
+            height: 50px;
+            font-size: 30px;
+            background-color: white;
+            border: none;
+            margin-top: 150px;
+
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <section>
+        <main>
+            <div class="kids-clothing">
+                <div class="card">
+                    <div class="card-title">
+                        Kids' Clothing
+                    </div>
+                    <div class="card-footer">
+                        <button>shop now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="kids-watches">
+                <div class="card">
+                    <div class="card-title">
+                        Kids' Watches
+                    </div>
+                    <div class="card-footer">
+                        <button>shop now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="kids-shoes">
+                <div class="card">
+                    <div class="card-title">
+                        Kids' Shoes
+                    </div>
+                    <div class="card-footer">
+                        <button>shop now</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+</html>
+
