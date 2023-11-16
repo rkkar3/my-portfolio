@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+        var appointments = [];
+        function LoadTask(){
+            document.getElementById("lstTasks").innerHTML = "";
+            appointments.map(function(item){
+                li = document.createElement("li");
+                li.innerHTML = item;
+                document.getElementById("lstTasks").appendChild(li);
+            })
+        }
+        function AddClick(){
+            var title = document.getElementById("txtTitle").value;
+            var date = document.getElementById("txtDate").value;
+            var appointment = `${title} - ${date} <button onclick = DeleteClick(${appointment}) class="bi bi-trash-fill btn btn-danger">Delete</button>`;
+            appointments.push(appointment);
+            alert(`Appointment Added to your To-Do list`);
+            LoadTask();
+        }
+        function DeleteClick(appointment){
+            var index = appointments.indexOf(appointment);
+            var flag = confirm(`Are you sure?\nWant to Delete this task`);
+            if (flag==true){
+                appointments.splice(index,1);
+                LoadTask();
+            }
+          
+        }
+
+    </script>
+    <style>
+        ul {
+            list-style: none;
+        }
+        li {
+            background-color: rgb(12, 93, 185);
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body onload="LoadTask()">
+    <h3 class="bg bg-info  text-center mb-3 ">TO-DO</h3>
+    <div class="mt-4 d-flex justify-content-evenly">
+        <input id="txtTitle" type="text" placeholder="Your Appointment Title">
+        <input id="txtDate" type="date">
+        <button onclick="AddClick()" class="btn btn-primary">Add</button>
+    </div>
+    <div>
+        <ul id="lstTasks" class="text-center" >
+
+        </ul>
+    </div>
+</body>
+</html>
